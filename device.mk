@@ -52,6 +52,11 @@ PRODUCT_PACKAGES += \
 # LiveDisplay
 $(call soong_config_set_bool,livedisplay_sysfs,enable_af,true)
 
+# Moto Camera 4
+TARGET_MOTCAMERA4 := miami
+
+$(call inherit-product, vendor/motorola/MotCamera4-sm6375/motcamera4.mk)
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.nxp \
